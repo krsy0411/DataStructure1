@@ -48,11 +48,11 @@ int main(void) {
     head->link = NULL;
 
     // 값 삽입
-    for(int i=1; i<6; i++) {
+    for(int i=2; i<6; i++) {
         insert_first(head, i*10);
     }
     // 끝에 삽입
-    insert_last(head, 90);
+    insert_last(head, 60);
     // 출력
     print_list(head);
 
