@@ -1,5 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+<<<<<<< HEAD
+=======
+#include <time.h>
+>>>>>>> 5c67d1e (더블 링크드 리스트 과제)
 
 // 구조체 선언
 typedef int elementType;
@@ -88,12 +92,39 @@ Node* GetNode(Node* head, int location) {
     return current;
 }
 
+<<<<<<< HEAD
+=======
+int GetNodeCount(Node* head) {
+    unsigned int count= 0;
+    Node* current = head;
+
+    while(current != NULL) {
+        current = current->nextNode;
+        count++;
+    }
+
+    return count;
+}
+
+>>>>>>> 5c67d1e (더블 링크드 리스트 과제)
 int main(void) {
     Node* list = NULL;
     Node* current = NULL;
 
+<<<<<<< HEAD
     for(int i=1; i<11; i++) {
         Node* newNode = CreateNode(i*10);
+=======
+    srand((unsigned int)time(NULL));
+
+    int ListSize = (rand() % 10) + 1; // 1-10
+    list = (Node*)malloc(sizeof(Node)*ListSize); // 랜덤한 리스트 사이즈만큼 메모리 동적할당
+
+
+    for(int i=0; i<4; i++) {
+        int randomValue = (rand() % 100) + 1; // 1-100
+        Node* newNode = CreateNode(randomValue);
+>>>>>>> 5c67d1e (더블 링크드 리스트 과제)
         AppendNode(&list, newNode);
     }
 
@@ -101,11 +132,19 @@ int main(void) {
     printf("노드 생성(초기화) 후 : ");
     PrintNode(current);
 
+<<<<<<< HEAD
     for(int i=1; i<5; i++) {
         current = GetNode(list, i);
         Node* newNode = CreateNode(i);
         InsertPrev(current, newNode);
     }
+=======
+    // 2번째 노드 위치 찾기
+    current = GetNode(list, 2);
+    // 노드 삽입
+    Node* newNode = CreateNode(599);
+    InsertAfter(current, newNode);
+>>>>>>> 5c67d1e (더블 링크드 리스트 과제)
 
     current = GetNode(list, 0);
     printf("노드 삽입 후 : ");
