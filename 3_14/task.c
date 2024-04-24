@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+// 포인터를 인자로 전달
 void reverse(char *p, char *q) {
     // abcd 문자열의 개수
     int length = 4;
@@ -17,9 +18,9 @@ int main(void) {
     printf("문자열 입력: ");
     scanf("%s", s1);
 
-    // 입력 문자열이 저장된 배열s1에 포인터 p 연결
+    // 입력 문자열이 저장된 배열s1에 포인터 p 연결 : 배열은 &(주소연산자) 사용할 필요 없음
     p = s1;
-    // 역순 문자열을 저장할 배열s2에 포인터 q 연결
+    // 역순 문자열을 저장할 배열s2에 포인터 q 연결 : 배열은 &(주소연산자) 사용할 필요 없음
     q = s2;
 
     reverse(p, q);

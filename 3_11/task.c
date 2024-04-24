@@ -37,7 +37,9 @@ int sum_all(int matrix[SIZE][SIZE]) {
 }
 
 int main(void) {
+    // 3x3 배열에 3개씩 자동으로 할당되는 문법입니다.
     int matrix[SIZE][SIZE] = {1,2,3,4,5,6,7,8,9};
+    // 각 줄(총 3줄)에 해당하는 총합값을 담기 위한 배열
     int horizontal_sum[SIZE];
     int vertical_sum[SIZE];
     int total = 0;
